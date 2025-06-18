@@ -17,16 +17,16 @@ RUN apt-get update && apt-get install -y \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Establecer directorio de trabajo
-WORKDIR /var/www
+WORKDIR /var/www/Rinconcitofinal-app
 
-# Copiar archivos del proyecto
-COPY . .
+# Copiar solo la carpeta Rinconcitofinal-app al contenedor
+COPY Rinconcitofinal-app ./ 
 
 # Instalar dependencias PHP con Composer
 RUN composer install --no-dev --optimize-autoloader
 
 # Establecer permisos para almacenamiento y cache
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/Rinconcitofinal-app/storage /var/www/Rinconcitofinal-app/bootstrap/cache
 
 # Exponer puerto 9000 para php-fpm
 EXPOSE 9000
