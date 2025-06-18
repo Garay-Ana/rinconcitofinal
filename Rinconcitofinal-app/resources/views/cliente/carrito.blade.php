@@ -8,7 +8,7 @@
     <x-slot name="header">
         <div class="flex items-center justify-between">
             <h2 class="font-semibold text-2xl text-gray-800">
-                🛒 Carrito de Compras
+                🛒 Carrito de Comprassss
             </h2>
             <a href="{{ url('/cliente') }}" class="inline-flex items-center text-sm text-gray-600 hover:text-gray-800">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
